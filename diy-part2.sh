@@ -12,7 +12,6 @@
 
 # 修改默认IP
 sed -i 's/192.168.1.1/192.168.20.200/g' package/base-files/files/bin/config_generate
-sed -i 's/\$\(INSTALL\_DIR\) \$\(1\)\/usr\/lib\/lua\/luci\/i18n/a \$\(INSTALL\_BIN\) \.\/root\/etc\/init.d\/AdGuardHome \$\(1\)\/etc\/init\.d\/AdGuardHome/g' package/feeds/kenzo/luci-app-adguardhome/Makefile
 
 # 增加微信推送姬
 # git clone https://github.com/tty228/luci-app-serverchan package/lean/luci-app-serverchan
@@ -31,6 +30,14 @@ git clone https://github.com/lisaac/luci-app-dockerman package/lisaac/luci-app-d
 #rm package/lean/luci-app-dockerman/README.md
 #git clone https://github.com/lisaac/luci-app-dockerman package/lean/luci-app-dockerman
 #cp -rf package/lean/luci-app-dockerman/applications/luci-app-dockerman package/lean
+
+# Docker
+svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
+git clone --depth=1 https://github.com/lisaac/luci-lib-docker
+if [ -e feeds/packages/utils/docker-ce ];then
+	sed -i '/dockerd/d' package/luci-app-dockerman/Makefile
+	sed -i 's/+docker/+docker-ce/g' package/luci-app-dockerman/Makefile
+fi
 
 # 增加一套主题
 #git clone https://github.com/siropboy/luci-theme-btmod package/lean/luci-theme-btmod
