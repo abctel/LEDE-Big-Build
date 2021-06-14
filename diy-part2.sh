@@ -24,20 +24,20 @@ git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/u
 git clone https://github.com/lisaac/luci-app-dockerman package/lisaac/luci-app-dockerman
 
 # 增加dockerman
-#rm -rf package/lean/luci-app-dockerman/.github
-#rm -rf package/lean/luci-app-dockerman/doc
-#rm package/lean/luci-app-dockerman/LICENSE
-#rm package/lean/luci-app-dockerman/README.md
-#git clone https://github.com/lisaac/luci-app-dockerman package/lean/luci-app-dockerman
-#cp -rf package/lean/luci-app-dockerman/applications/luci-app-dockerman package/lean
+rm -rf package/lean/luci-app-dockerman/.github
+rm -rf package/lean/luci-app-dockerman/doc
+rm package/lean/luci-app-dockerman/LICENSE
+rm package/lean/luci-app-dockerman/README.md
+git clone https://github.com/lisaac/luci-app-dockerman package/lean/luci-app-dockerman
+cp -rf package/lean/luci-app-dockerman/applications/luci-app-dockerman package/lean
 
 # Docker
-svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
-git clone --depth=1 https://github.com/lisaac/luci-lib-docker
-if [ -e feeds/packages/utils/docker-ce ];then
-	sed -i '/dockerd/d' package/luci-app-dockerman/Makefile
-	sed -i 's/+docker/+docker-ce/g' package/luci-app-dockerman/Makefile
-fi
+#svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
+#git clone --depth=1 https://github.com/lisaac/luci-lib-docker
+#if [ -e feeds/packages/utils/docker-ce ];then
+#	sed -i '/dockerd/d' package/luci-app-dockerman/Makefile
+#	sed -i 's/+docker/+docker-ce/g' package/luci-app-dockerman/Makefile
+#fi
 
 # 增加一套主题
 #git clone https://github.com/siropboy/luci-theme-btmod package/lean/luci-theme-btmod
