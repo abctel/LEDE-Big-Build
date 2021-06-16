@@ -24,7 +24,7 @@ git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/u
 rm -rf package/luci-lib-docker/
 rm -rf package/lean/luci-app-dockerman/
 git clone https://github.com/lisaac/luci-lib-docker package/luci-lib-docker/
-git clone https://github.com/lisaac/luci-app-dockerman package/lisaac/luci-app-dockerman
+git clone https://github.com/lisaac/luci-app-dockerman package/lisaac/luci-app-dockerman/
 #cp -rf package/lean/luci-app-dockerman/applications/luci-app-dockerman package/lean
 
 # Docker
