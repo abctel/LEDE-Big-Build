@@ -21,21 +21,19 @@ git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/u
 # 增加Chinadns-NG插件
 #git clone https://github.com/pexcn/openwrt-chinadns-ng.git package/chinadns-ng
 # 增加dockerman插件
+rm -rf package/luci-lib-docker/
+rm -rf package/lean/luci-app-dockerman/
+git clone https://github.com/lisaac/luci-lib-docker package/luci-lib-docker/
 git clone https://github.com/lisaac/luci-app-dockerman package/lisaac/luci-app-dockerman
-
-# 增加dockerman
-#rm -rf package/lean/luci-app-dockerman/
-#git clone https://github.com/lisaac/luci-lib-docker package/lean/luci-lib-docker
-#git clone https://github.com/lisaac/luci-app-dockerman package/lean/luci-app-dockerman
 #cp -rf package/lean/luci-app-dockerman/applications/luci-app-dockerman package/lean
 
 # Docker
-svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
-git clone --depth=1 https://github.com/lisaac/luci-lib-docker
-if [ -e feeds/packages/utils/docker-ce ];then
+#svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
+#git clone --depth=1 https://github.com/lisaac/luci-lib-docker
+#if [ -e feeds/packages/utils/docker-ce ];then
 	sed -i '/dockerd/d' package/luci-app-dockerman/Makefile
 	sed -i 's/+docker/+docker-ce/g' package/luci-app-dockerman/Makefile
-fi
+#fi
 
 # 增加一套主题
 #git clone https://github.com/siropboy/luci-theme-btmod package/lean/luci-theme-btmod
