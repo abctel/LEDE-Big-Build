@@ -33,6 +33,13 @@ git clone https://github.com/lisaac/luci-app-dockerman package/lean/luci-app-doc
 mkdir abctel
 git clone https://github.com/abctel/LEDE-Firmware-Config.git abctel/config
 
+mkdir /package/feeds/kenzo/luci-app-smartdns/root/etc/smartdns
+mv -f abctel/config/custom.conf /package/feeds/kenzo/luci-app-smartdns/root/etc/smartdns/custom.conf
+mkdir /package/feeds/kenzo/luci-app-smartdns/root/etc/config
+mv -f abctel/config/smartdns /package/feeds/kenzo/luci-app-smartdns/root/etc/config/smartdns
+mv -f abctel/config/AdGuardHome.yaml package/feeds/kenzo/luci-app-adguardhome/root/etc/config/AdGuardHome.yaml
+mv -f abctel/config/update_core.sh package/feeds/kenzo/luci-app-adguardhome/root/usr/share/AdGuardHome/update_core.sh
+mv -f abctel/config/AdGuardHome_template.yaml package/feeds/kenzo/luci-app-adguardhome/root/usr/share/AdGuardHome/AdGuardHome_template.yaml
 
 # Docker
 #svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
