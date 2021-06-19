@@ -11,7 +11,7 @@
 #
 
 # 修改默认IP
-sed -i 's/192.168.1.1/192.168.20.200/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.100.200/g' package/base-files/files/bin/config_generate
 
 # 增加微信推送姬
 # git clone https://github.com/tty228/luci-app-serverchan package/lean/luci-app-serverchan
@@ -32,6 +32,8 @@ git clone https://github.com/lisaac/luci-app-dockerman package/lean/luci-app-doc
 # 配置定制
 mkdir abctel
 git clone https://github.com/abctel/LEDE-Firmware-Config.git abctel/config
+
+mv -f abctel/config/passwall package/feeds/kenzo/luci-app-passwall/root/etc/config/passwall
 
 mkdir package/feeds/kenzo/luci-app-smartdns/root/etc/smartdns
 mv -f abctel/config/custom.conf package/feeds/kenzo/luci-app-smartdns/root/etc/smartdns/custom.conf
