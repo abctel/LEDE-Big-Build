@@ -60,3 +60,6 @@ mv -f abctel/config/AdGuardHome_template.yaml package/feeds/kenzo/luci-app-adgua
 # rm -rf package/lean/luci-theme-argon
 # 拉取argon主题
 # git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+
+# 说不得
+git clone https://github.com/ITdesk01/jd_openwrt_script.git package/jd_openwrt_script
