@@ -23,9 +23,9 @@ sed -i 's/192.168.1.1/192.168.100.200/g' package/base-files/files/bin/config_gen
 #git clone https://github.com/pexcn/openwrt-chinadns-ng.git package/chinadns-ng
 
 # 增加dockerman插件
-rm -rf package/luci-lib-docker/
+# rm -rf package/luci-lib-docker/
 rm -rf package/lean/luci-app-dockerman/
-git clone https://github.com/lisaac/luci-lib-docker package/luci-lib-docker/
+# git clone https://github.com/lisaac/luci-lib-docker package/luci-lib-docker/
 git clone https://github.com/lisaac/luci-app-dockerman package/lean/luci-app-dockerman/
 #cp -rf package/lean/luci-app-dockerman/applications/luci-app-dockerman package/lean
 
