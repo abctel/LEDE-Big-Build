@@ -169,3 +169,5 @@ DockerMan目前有个小Bug（【Docker】【概况】【Docker Daemon】中的�
 [tty228](https://github.com/tty228)
 
 [Harry Gabriel](https://github.com/ozon)
+
+[ITdesk](https://github.com/ITdesk01)
