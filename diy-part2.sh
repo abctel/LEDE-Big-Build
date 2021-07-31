@@ -24,7 +24,7 @@ sed -i 's/192.168.1.1/192.168.100.200/g' package/base-files/files/bin/config_gen
 
 # 增加dockerman插件
 # rm -rf package/luci-lib-docker/
-rm -rf package/lean/luci-app-dockerman/
+# rm -rf package/lean/luci-app-dockerman/
 # git clone https://github.com/lisaac/luci-lib-docker package/luci-lib-docker/
 git clone https://github.com/lisaac/luci-app-dockerman package/lean/luci-app-dockerman/
 #cp -rf package/lean/luci-app-dockerman/applications/luci-app-dockerman package/lean
@@ -62,4 +62,4 @@ mv -f abctel/config/AdGuardHome_template.yaml package/feeds/kenzo/luci-app-adgua
 # git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 
 # 说不得
-git clone https://github.com/ITdesk01/jd_openwrt_script.git package/jd_openwrt_script
+# git clone https://github.com/ITdesk01/jd_openwrt_script.git package/jd_openwrt_script
