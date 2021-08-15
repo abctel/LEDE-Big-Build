@@ -1,0 +1,68 @@
+
+config smartdns
+	option enabled '1'
+	option server_name 'ABCTel'
+	option port '6053'
+	option prefetch_domain '1'
+	option server_group 'mainland'
+	option seconddns_port '7053'
+	option seconddns_no_speed_check '0'
+	option seconddns_no_rule_addr '0'
+	option seconddns_no_rule_nameserver '0'
+	option seconddns_no_rule_ipset '0'
+	option seconddns_no_rule_soa '0'
+	option seconddns_no_cache '0'
+	option coredump '0'
+	option seconddns_server_group 'NoChina'
+	option seconddns_no_dualstack_selection '1'
+	option redirect 'none'
+	option tcp_server '0'
+	option rr_ttl '3600'
+	option rr_ttl_min '2400'
+	option rr_ttl_max '86400'
+	option seconddns_tcp_server '0'
+	option force_aaaa_soa '1'
+	option ipv6_server '1'
+	option dualstack_ip_selection '1'
+	option serve_expired '0'
+	option cache_size '0'
+	list old_redirect 'none'
+	list old_port '6053'
+	list old_enabled '1'
+
+config server
+	option type 'udp'
+	option name 'CN-ISP'
+	option ip '223.5.5.5'
+	option enabled '1'
+
+config server
+	option enabled '1'
+	option name 'CN-ADV ALI DOH'
+	option ip 'https://dns.alidns.com/dns-query'
+	option type 'https'
+
+config server
+	option enabled '1'
+	option name 'CN-ADV DNSPOD DOH'
+	option ip 'https://doh.pub/dns-query'
+	option type 'https'
+
+config server
+	option enabled '1'
+	option name 'CN-ADV 360 DOH'
+	option ip 'https://doh.360.cn/dns-query'
+	option type 'https'
+
+config server
+	option enabled '1'
+	option name 'CN-ADV rubyfish DOH'
+	option ip 'https://rubyfish.cn/dns-query'
+	option type 'https'
+
+config server
+	option name 'CN-ADV Cloudflare DOH'
+	option ip 'https://1.1.1.1/dns-query'
+	option type 'https'
+	option enabled '1'
+
