@@ -6,7 +6,7 @@ config defaults
 	option forward 'REJECT'
 	option flow_offloading '0'
 	option flow_offloading_hw '0'
-	option fullcone '0'
+	option fullcone '1'
 
 config zone
 	option name 'lan'
