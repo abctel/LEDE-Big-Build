@@ -33,18 +33,29 @@ dns:
   refuse_any: true
   upstream_dns:
   - 127.0.0.1:54
+  - '[::1]:54'
   upstream_dns_file: ""
   bootstrap_dns:
-  - 1.1.1.1
-  all_servers: true
-  fastest_addr: false
-  allowed_clients: []
+  - 80.80.80.80:53
+  - 9.9.9.11:9953
+  - 80.80.81.81:53
+  - 149.112.112.11:9953
+  all_servers: false
+  fastest_addr: true
+  allowed_clients: 
+  - 10.0.0.0/8
+  - 172.16.0.0/12
+  - 192.168.0.0/16
+  - 127.0.0.0/8
+  - fc00::/7
+  - fe80::/10
+  - ::1/128
   disallowed_clients: []
   blocked_hosts:
   - version.bind
   - id.server
   - hostname.bind
-  cache_size: 0
+  cache_size: 1048576
   cache_ttl_min: 0
   cache_ttl_max: 0
   bogus_nxdomain: []
@@ -54,7 +65,7 @@ dns:
   max_goroutines: 300
   ipset: []
   filtering_enabled: true
-  filters_update_interval: 24
+  filters_update_interval: 1
   parental_enabled: false
   safesearch_enabled: false
   safebrowsing_enabled: false
@@ -174,7 +185,17 @@ filters:
   name: Google hosts
   id: 22
 whitelist_filters: []
-user_rules: []
+user_rules: 
+- '@@||jd.com^'
+- '@@||etao.com^'
+- '@@||tongdun.net^'
+- '@@||taobao.com^'
+- '@@ii.gdt.qq.com^$important'
+- '@@||toutiao.com^'
+- '@@||alipay.com^'
+- '@@||bilibili.com^'
+- '@@/ad.dmm/'
+- '@@/ip.affiliate.dmm/'
 dhcp:
   enabled: false
   interface_name: ""
