@@ -1,4 +1,4 @@
-# 近期请暂勿更新，大版本调整中，将引入全面防污染功能、dnsmasq -> AdGuardHome -> SmartDNS -> PassWall -> Client的数据运行流程及整套开机即用的配置文件。
+# 目前还在测试中，已经趋于稳定，欢迎部署试用及问题反馈。
 
 # 固件介绍
 
@@ -15,7 +15,6 @@
 7. KMS服务器      （内网windows家族软件激活）
 8. TTYD终端       （超级方便的web ssh)
 9. DockerMan      (容器技术虚拟机的Web管理插件）
-10. JD_Script     (某不愿透露姓名的JD羊毛集成大佬的Openwrt插件，使用方法看下面)
 
 - 重要提醒
 
@@ -30,7 +29,7 @@ DockerMan目前有个小Bug（【Docker】【概况】【Docker Daemon】中的�
 1. 默认IP:192.168.100.200
 2. 路由账号:root
 3. 路由密码:password
-4. adg账号:admin
+4. adg账号:root
 5. adg密码:password
 6. passwall默认已添加免费订阅地址（订阅页 - 更新订阅信息即可获取地址)，然后进入passwall插件 【基本设置】 - 【主要】 将其中的【默认】选项中的【直连】改为获取到的机场，最后启用【主开关】，点击【保存】即可使用。
 7. AdGuradHome插件需要先点击【更新核心版本】升级到最新核心，将【重定向】选项改为【使用53端口替换dnsmasq】，然后【保存】即可正常开始使用了。（如果需要广告过滤请点击【AdGuradHome Web:3000】按钮后，选择【过滤器】 - 【DNS封锁清单】，将需要的过滤规则启用即可。
