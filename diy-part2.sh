@@ -17,7 +17,7 @@ sed -i 's/192.168.1.1/192.168.100.200/g' package/base-files/files/bin/config_gen
 # git clone https://github.com/tty228/luci-app-serverchan package/lean/luci-app-serverchan
 
 # 增加关机插件
-#git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/uci-app-poweroff
+git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
 
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/abctel/luci-app-smartdns
 git clone https://github.com/rufengsuixing/luci-app-adguardhome package/abctel/luci-app-adguardhome
