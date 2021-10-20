@@ -29,3 +29,6 @@ git clone https://github.com/lisaac/luci-app-dockerman package/abctel/luci-app-d
 # git clone https://github.com/ITdesk01/jd_openwrt_script.git package/abctel/jd_openwrt_script
 chmod 755 files/etc/init.d/smartdns
 chmod 755 files/usr/bin/AdGuardHome/AdGuardHome
+
+rm -rf feeds/packages/net/dnscrypt-proxy2
+git clone https://github.com/abctel/dnscrypt-proxy2 feeds/packages/net/dnscrypt-proxy2
