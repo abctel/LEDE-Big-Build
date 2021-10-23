@@ -28,7 +28,7 @@ env:
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
-  UPLOAD_COWTRANSFER: false
+  UPLOAD_COWTRANSFER: true
   UPLOAD_WETRANSFER: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
@@ -185,6 +185,6 @@ jobs:
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
         keep_latest: 3
-        delete_tags: true
+        delete_tags: false
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
